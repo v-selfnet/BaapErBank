@@ -4,10 +4,14 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const getWithdraw = parseFloat(withdrawField.value);
 
     //validation check if the HTML input field type is text
-    // if(isNuN(getWithdraw)){
+    // if(isNuN(withdrawField)){
     //     alert('Enter valid number');
     //     return;
     // }
+    if( withdrawField.value === ''){
+        alert('Enter valid number');
+        return;
+    }
     
     // 1. make connect with withdraw h2 & get value
     const setWithdraw = document.getElementById('current-withdraw');
